@@ -75,7 +75,7 @@ go-zero的自身的数据库框架个人感觉没有gorm做的好，而且goctl 
 
 [代码生成器源码地址](https://github.com/smallnest/go-web-framework-benchmark)
 ### 2.1 安装代码生成器
-* [下载源码](http://github.com/wangliujing/goctl)
+* [下载源码](https://github.com/wangliujing/goctl)
 * 在go.mod文件所在的目录执行命令
 ```shell
 go install
