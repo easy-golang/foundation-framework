@@ -1,7 +1,7 @@
 package xxl
 
 import (
-	"github.com/wangliujing/foundation-framework/util/ip"
+	"github.com/easy-golang/foundation-framework/util/ip"
 	"time"
 )
 

@@ -6,7 +6,7 @@ import (
 	"github.com/apache/shenyu-client-golang/common/constants"
 	"github.com/apache/shenyu-client-golang/common/shenyu_error"
 	"github.com/apache/shenyu-client-golang/model"
-	"github.com/wangliujing/foundation-framework/err/comm"
+	"github.com/easy-golang/foundation-framework/err/comm"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/netx"
 	"github.com/zeromicro/go-zero/rest"

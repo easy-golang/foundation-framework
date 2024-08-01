@@ -1,8 +1,8 @@
 package umap
 
 import (
-	"github.com/wangliujing/foundation-framework/constant/symbol"
-	"github.com/wangliujing/foundation-framework/util/ustring"
+	"github.com/easy-golang/foundation-framework/constant/symbol"
+	"github.com/easy-golang/foundation-framework/util/ustring"
 	"reflect"
 	"strings"
 )

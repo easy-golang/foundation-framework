@@ -75,7 +75,7 @@ go-zero的自身的数据库框架个人感觉没有gorm做的好，而且goctl 
 
 [代码生成器源码地址](https://github.com/smallnest/go-web-framework-benchmark)
 ### 2.1 安装代码生成器
-* [下载源码](https://github.com/wangliujing/goctl)
+* [下载源码](https://github.com/easy-golang/goctl)
 * 在go.mod文件所在的目录执行命令
 ```shell
 go install
@@ -229,8 +229,8 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 
-	"github.com/wangliujing/foundation-framework/common/dto"
-	"github.com/wangliujing/foundation-framework/orm"
+	"github.com/easy-golang/foundation-framework/common/dto"
+	"github.com/easy-golang/foundation-framework/orm"
 	"gorm.io/gorm/clause"
 )
 
@@ -482,7 +482,7 @@ func (m *defaultAwsMsgMapper) PageUnscopedWithField(fields []string, page int64,
 ```go
 package mapper
 
-import "github.com/wangliujing/foundation-framework/orm"
+import "github.com/easy-golang/foundation-framework/orm"
 
 var _ AwsMsgMapper = (*customAwsMsgMapper)(nil)
 
@@ -518,7 +518,7 @@ import (
 	"client/code/internal/svc"
 	"flag"
 	"fmt"
-	"github.com/wangliujing/foundation-framework/system"
+	"github.com/easy-golang/foundation-framework/system"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
@@ -608,9 +608,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/wangliujing/foundation-framework/reg/nacos"
-	"github.com/wangliujing/foundation-framework/shenyu"
-	"github.com/wangliujing/foundation-framework/system"
+	"github.com/easy-golang/foundation-framework/reg/nacos"
+	"github.com/easy-golang/foundation-framework/shenyu"
+	"github.com/easy-golang/foundation-framework/system"
 
 	"client/internal/config"
 	"client/internal/handler"
@@ -664,8 +664,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/wangliujing/foundation-framework/reg/consul"
-	"github.com/wangliujing/foundation-framework/shenyu"
+	"github.com/easy-golang/foundation-framework/reg/consul"
+	"github.com/easy-golang/foundation-framework/shenyu"
 
 	"client/internal/config"
 	"client/internal/handler"
@@ -728,7 +728,7 @@ func main() {
 }
 ```
 ```go
-import "github.com/wangliujing/foundation-framework/handler"
+import "github.com/easy-golang/foundation-framework/handler"
 
 server.AddRoutes(
     rest.WithMiddlewares(
@@ -772,7 +772,7 @@ func (s *DepositServiceServer) Deposit(ctx context.Context, in *mock.DepositRequ
 
 ### 4.2.1 在路由上加上用户信息解析中间件
 ```go
-import "github.com/wangliujing/foundation-framework/handler"
+import "github.com/easy-golang/foundation-framework/handler"
 
 func RegisterHandlers(server shenyu.Server, serverCtx *svc.ServiceContext) {
    server.AddRoutes(
@@ -836,7 +836,7 @@ import (
 	"fmt"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
-	"github.com/wangliujing/foundation-framework/common/security"
+	"github.com/easy-golang/foundation-framework/common/security"
 	"service/internal/config"
 )
 
@@ -872,8 +872,8 @@ import (
 	"fmt"
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/logx"
-	"github.com/wangliujing/foundation-framework/common/security"
-	"github.com/wangliujing/foundation-framework/err/comm"
+	"github.com/easy-golang/foundation-framework/common/security"
+	"github.com/easy-golang/foundation-framework/err/comm"
 	"service/internal/config"
 )
 
@@ -893,7 +893,7 @@ func main() {
 输出内容
 ```go
 API server listening at: 127.0.0.1:64509
-2023-10-20T16:46:05.482+08:00    error  github.com/wangliujing/foundation-framework/err/comm.Error:测试错误
+2023-10-20T16:46:05.482+08:00    error  github.com/easy-golang/foundation-framework/err/comm.Error:测试错误
     at D:/Program Files/Go/IdeaProject/gozero/server/main.go ( main.go:25 )
     at D:/Program Files/Go/go1.20.7/src/runtime/proc.go ( proc.go:250 )
     at D:/Program Files/Go/go1.20.7/src/runtime/asm_amd64.s ( asm_amd64.s:1598 )
@@ -1011,7 +1011,7 @@ type Config struct {
 
 ```go
 // 导入基础框架redis包
-improt "github.com/wangliujing/foundation-framework/redis"
+improt "github.com/easy-golang/foundation-framework/redis"
 
 redisClient := redis.NewClient(c.Redis)
 lock := redisClient.NewRedisLock("lockName")
@@ -1032,7 +1032,7 @@ return nil
 
 ```go
 // 导入基础框架redis包
-improt "github.com/wangliujing/foundation-framework/redis"
+improt "github.com/easy-golang/foundation-framework/redis"
 
 redisClient := redis.NewClient(c.Redis)
 lock := redisClient.NewRedisLock("lockName")
@@ -1057,7 +1057,7 @@ lock.LockFuncWithContext(timeout, func() error {
 
 ```go
 // 导入基础框架redis包
-improt "github.com/wangliujing/foundation-framework/redis"
+improt "github.com/easy-golang/foundation-framework/redis"
 
 redisClient := redis.NewClient(c.Redis)
 lock := redisClient.NewRedisLock("lockName")
@@ -1163,9 +1163,9 @@ type Conf struct {
 ### 9.2.2 RabbitMq发送普通消息
 ```go
 import (
-    "github.com/wangliujing/foundation-framework/orm"
-    "github.com/wangliujing/foundation-framework/rabbitmq"
-    "github.com/wangliujing/foundation-framework/redis"
+    "github.com/easy-golang/foundation-framework/orm"
+    "github.com/easy-golang/foundation-framework/rabbitmq"
+    "github.com/easy-golang/foundation-framework/redis"
 )
 
 gormConnection := orm.NewGormConnection(c.Gorm)
@@ -1186,9 +1186,9 @@ rabbitmqClient.DoPublish("test", "test", msg)
 ### 9.2.3 RabbitMq发送可靠消息
 ```go
 import (
-    "github.com/wangliujing/foundation-framework/orm"
-    "github.com/wangliujing/foundation-framework/rabbitmq"
-    "github.com/wangliujing/foundation-framework/redis"
+    "github.com/easy-golang/foundation-framework/orm"
+    "github.com/easy-golang/foundation-framework/rabbitmq"
+    "github.com/easy-golang/foundation-framework/redis"
 )
 
 
@@ -1230,9 +1230,9 @@ rabbitmqClient.DoNotifyPublish("test", "test", msg, func(messageId string) error
 发送消息时本地消息表存储消息与业务在同一个事物执行，事物提交后，发送消息，消息发送成功后逻辑删除本地事物表`transactional_msg`数据，消息发送失败，后续定时任务会扫描未删除的消息一直重试直到消息发送成功，这些逻辑基础框架全部封装，程序员不用关心细节，按如下示例代码发送事物消息即可
 ```go
 import (
-    "github.com/wangliujing/foundation-framework/orm"
-    "github.com/wangliujing/foundation-framework/rabbitmq"
-    "github.com/wangliujing/foundation-framework/redis"
+    "github.com/easy-golang/foundation-framework/orm"
+    "github.com/easy-golang/foundation-framework/rabbitmq"
+    "github.com/easy-golang/foundation-framework/redis"
 )
 	gormConnection := orm.NewGormConnection(c.Gorm)
 	redisClient := redis.NewClient(c.Redis)
@@ -1263,8 +1263,8 @@ package listener
 import (
 	"github.com/streadway/amqp"
 	"github.com/zeromicro/go-zero/core/logx"
-	"github.com/wangliujing/foundation-framework/err/comm"
-	"github.com/wangliujing/foundation-framework/rabbitmq"
+	"github.com/easy-golang/foundation-framework/err/comm"
+	"github.com/easy-golang/foundation-framework/rabbitmq"
 )
 
 type MsgListener struct {
@@ -1309,9 +1309,9 @@ func (m MsgListener) OnDelivery(delivery *amqp.Delivery) error {
 注册监听器
 ```go
 import (
-    "github.com/wangliujing/foundation-framework/orm"
-    "github.com/wangliujing/foundation-framework/rabbitmq"
-    "github.com/wangliujing/foundation-framework/redis"
+    "github.com/easy-golang/foundation-framework/orm"
+    "github.com/easy-golang/foundation-framework/rabbitmq"
+    "github.com/easy-golang/foundation-framework/redis"
 )
 
 gormConnection := orm.NewGormConnection(c.Gorm)
@@ -1348,7 +1348,7 @@ Consul:
 配置类
 ```go
 import (
-    "github.com/wangliujing/foundation-framework/reg/consul"
+    "github.com/easy-golang/foundation-framework/reg/consul"
 )
 
 type Config struct {
@@ -1370,10 +1370,10 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/common/security"
-	"github.com/wangliujing/foundation-framework/jsonrpc"
-	"github.com/wangliujing/foundation-framework/reg/consul"
-	"github.com/wangliujing/foundation-framework/system"
+	"github.com/easy-golang/foundation-framework/common/security"
+	"github.com/easy-golang/foundation-framework/jsonrpc"
+	"github.com/easy-golang/foundation-framework/reg/consul"
+	"github.com/easy-golang/foundation-framework/system"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"service/internal/config"
@@ -1452,7 +1452,7 @@ package config
 
 import (
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/reg/consul"
+	"github.com/easy-golang/foundation-framework/reg/consul"
 )
 
 type Config struct {
@@ -1473,10 +1473,10 @@ import (
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/common/security"
-	"github.com/wangliujing/foundation-framework/jsonrpc"
-	"github.com/wangliujing/foundation-framework/reg/consul"
-	"github.com/wangliujing/foundation-framework/system"
+	"github.com/easy-golang/foundation-framework/common/security"
+	"github.com/easy-golang/foundation-framework/jsonrpc"
+	"github.com/easy-golang/foundation-framework/reg/consul"
+	"github.com/easy-golang/foundation-framework/system"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"service/internal/config"
@@ -1539,7 +1539,7 @@ package config
 
 import (
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/reg/consul"
+	"github.com/easy-golang/foundation-framework/reg/consul"
 )
 
 type Config struct {
@@ -1550,7 +1550,7 @@ type Config struct {
 
 服务调用
 ```go
-import "github.com/wangliujing/foundation-framework/reg/consul"
+import "github.com/easy-golang/foundation-framework/reg/consul"
 
 
 registry := consul.NewRegistry(c.Consul, c.RpcServerConf)
@@ -1586,7 +1586,7 @@ package config
 
 import (
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/reg/nacos"
+	"github.com/easy-golang/foundation-framework/reg/nacos"
 )
 
 type Config struct {
@@ -1605,10 +1605,10 @@ import (
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/common/security"
-	"github.com/wangliujing/foundation-framework/jsonrpc"
-	"github.com/wangliujing/foundation-framework/reg/nacos"
-	"github.com/wangliujing/foundation-framework/system"
+	"github.com/easy-golang/foundation-framework/common/security"
+	"github.com/easy-golang/foundation-framework/jsonrpc"
+	"github.com/easy-golang/foundation-framework/reg/nacos"
+	"github.com/easy-golang/foundation-framework/system"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"service/internal/config"
@@ -1656,8 +1656,8 @@ package config
 import (
 	"github.com/zeromicro/go-zero/rest"
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/reg/nacos"
-	"github.com/wangliujing/foundation-framework/shenyu"
+	"github.com/easy-golang/foundation-framework/reg/nacos"
+	"github.com/easy-golang/foundation-framework/shenyu"
 )
 
 type Config struct {
@@ -1695,7 +1695,7 @@ package config
 
 import (
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/reg/nacos"
+	"github.com/easy-golang/foundation-framework/reg/nacos"
 )
 
 type Config struct {
@@ -1714,10 +1714,10 @@ import (
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/common/security"
-	"github.com/wangliujing/foundation-framework/jsonrpc"
-	"github.com/wangliujing/foundation-framework/reg/nacos"
-	"github.com/wangliujing/foundation-framework/system"
+	"github.com/easy-golang/foundation-framework/common/security"
+	"github.com/easy-golang/foundation-framework/jsonrpc"
+	"github.com/easy-golang/foundation-framework/reg/nacos"
+	"github.com/easy-golang/foundation-framework/system"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"service/internal/config"
@@ -1781,7 +1781,7 @@ package config
 
 import (
 	"github.com/zeromicro/go-zero/zrpc"
-	"github.com/wangliujing/foundation-framework/reg/nacos"
+	"github.com/easy-golang/foundation-framework/reg/nacos"
 )
 
 type Config struct {
@@ -1792,7 +1792,7 @@ type Config struct {
 
 服务调用
 ```go
-improt 	"github.com/wangliujing/foundation-framework/reg/nacos"
+improt 	"github.com/easy-golang/foundation-framework/reg/nacos"
 
 registry := nacos.NewRegistry(c.Nacos, c.RpcServerConf)
 jsonRpcClient := registry.NewJsonRpcClient()
@@ -1987,7 +1987,7 @@ ServiceContext 是go-zero的一种编码习惯，这个类型是goctl代码生�
 package svc
 
 import (
-   "github.com/wangliujing/foundation-framework/orm"
+   "github.com/easy-golang/foundation-framework/orm"
    "service/internal/config"
 )
 

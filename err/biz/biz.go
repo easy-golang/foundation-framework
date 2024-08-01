@@ -3,7 +3,7 @@ package biz
 import (
 	"context"
 	"fmt"
-	"github.com/wangliujing/foundation-framework/err"
+	"github.com/easy-golang/foundation-framework/err"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"

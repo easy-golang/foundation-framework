@@ -1,7 +1,7 @@
 package system
 
 import (
-	"github.com/wangliujing/foundation-framework/err/biz"
+	"github.com/easy-golang/foundation-framework/err/biz"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/proc"
 	"github.com/zeromicro/go-zero/core/service"

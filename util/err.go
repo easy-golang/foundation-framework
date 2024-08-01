@@ -1,7 +1,7 @@
 package util
 
 import (
-	"github.com/wangliujing/foundation-framework/err/comm"
+	"github.com/easy-golang/foundation-framework/err/comm"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 

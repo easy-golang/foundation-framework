@@ -1,8 +1,8 @@
 package rabbitmq
 
 import (
-	"github.com/wangliujing/foundation-framework/err/comm"
-	"github.com/wangliujing/foundation-framework/orm"
+	"github.com/easy-golang/foundation-framework/err/comm"
+	"github.com/easy-golang/foundation-framework/orm"
 	"github.com/zeromicro/go-zero/core/logx"
 	"gorm.io/gorm/clause"
 	"gorm.io/gorm/logger"

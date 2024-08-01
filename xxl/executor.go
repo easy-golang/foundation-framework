@@ -3,7 +3,7 @@ package xxl
 import (
 	"context"
 	"encoding/json"
-	"github.com/wangliujing/foundation-framework/err/comm"
+	"github.com/easy-golang/foundation-framework/err/comm"
 	"github.com/zeromicro/go-zero/core/logx"
 	"io"
 	"net/http"

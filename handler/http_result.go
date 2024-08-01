@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"github.com/wangliujing/foundation-framework/err"
-	"github.com/wangliujing/foundation-framework/err/biz"
+	"github.com/easy-golang/foundation-framework/err"
+	"github.com/easy-golang/foundation-framework/err/biz"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

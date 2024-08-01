@@ -1,10 +1,10 @@
 package consul
 
 import (
+	"github.com/easy-golang/foundation-framework/err/comm"
+	"github.com/easy-golang/foundation-framework/jsonrpc"
 	"github.com/hashicorp/consul/api"
 	"github.com/smallnest/rpcx/server"
-	"github.com/wangliujing/foundation-framework/err/comm"
-	"github.com/wangliujing/foundation-framework/jsonrpc"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/service"
 	"github.com/zeromicro/go-zero/rest"

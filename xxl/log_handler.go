@@ -3,9 +3,9 @@ package xxl
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/wangliujing/foundation-framework/orm"
-	"github.com/wangliujing/foundation-framework/redis"
-	"github.com/wangliujing/foundation-framework/util"
+	"github.com/easy-golang/foundation-framework/orm"
+	"github.com/easy-golang/foundation-framework/redis"
+	"github.com/easy-golang/foundation-framework/util"
 	"github.com/zeromicro/go-zero/core/logx"
 	"github.com/zeromicro/go-zero/core/proc"
 	"net/http"

@@ -2,7 +2,7 @@ package comm
 
 import (
 	"fmt"
-	"github.com/wangliujing/foundation-framework/err"
+	"github.com/easy-golang/foundation-framework/err"
 )
 
 func New(message string) Error {

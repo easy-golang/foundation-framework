@@ -1,8 +1,8 @@
 package reg
 
 import (
+	"github.com/easy-golang/foundation-framework/jsonrpc"
 	"github.com/smallnest/rpcx/server"
-	"github.com/wangliujing/foundation-framework/jsonrpc"
 )
 
 type Registry interface {

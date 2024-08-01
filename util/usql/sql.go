@@ -2,8 +2,8 @@ package usql
 
 import (
 	"database/sql"
-	"github.com/wangliujing/foundation-framework/err/comm"
-	"github.com/wangliujing/foundation-framework/util/ref"
+	"github.com/easy-golang/foundation-framework/err/comm"
+	"github.com/easy-golang/foundation-framework/util/ref"
 	"github.com/zeromicro/go-zero/core/logx"
 	"time"
 )
