@@ -1,6 +1,6 @@
-module github.com/wangliujing/foundation-framework
+module github.com/easy-golang/foundation-framework
 
-go 1.20
+go 1.21.12
 
 require (
 	github.com/apache/shenyu-client-golang v1.0.0

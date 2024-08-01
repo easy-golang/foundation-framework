@@ -43,7 +43,6 @@ type lock struct {
 }
 
 func (l *lock) Lock() bool {
-	l.SetExpire(60)
 	for {
 		ok, err := l.Acquire()
 		if err != nil {
@@ -51,6 +50,7 @@ func (l *lock) Lock() bool {
 			return false
 		}
 		if ok {
+			l.SetExpire(60)
 			// 锁重入的时候直接返回，不用执行锁续期
 			if atomic.LoadUint32(&l.state) == 1 {
 				return true
@@ -101,13 +101,13 @@ func (l *lock) LockWithContext(ctx context.Context) bool {
 }
 
 func (l *lock) TryLock() bool {
-	l.SetExpire(60)
 	ok, err := l.Acquire()
 	if err != nil {
 		logx.Error(comm.Wrap(err))
 		return false
 	}
 	if ok {
+		l.SetExpire(60)
 		// 锁重入的时候直接返回，不用执行锁续期
 		if atomic.LoadUint32(&l.state) == 1 {
 			return true
